@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرشد - الرئيسية</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-body">
+
+    <header class="dashboard-header">
+        <div class="user-greeting">
+            <h1 id="greetingName">أهلاً بك 👋</h1>
+            <p id="userLevelInfo" class="user-level-badge">المستوى الدراسي</p>
+        </div>
+        <div class="avatar-container">
+            <span>🎓</span>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <!-- بطاقة الدردشة الرئيسية -->
+        <div class="card-primary" onclick="window.location.href='chat.html'">
+            <div class="card-icon">🤖</div>
+            <div class="card-text">
+                <h2>هضر مع المرشد</h2>
+                <p>اسأل عن أي درس، تمرين، أو استشارة توجيهية</p>
+            </div>
+            <div class="card-arrow">←</div>
+        </div>
+
+        <!-- بطاقة الدروس (قريباً) -->
+        <div class="card-secondary">
+            <div class="card-icon">📚</div>
+            <div class="card-text">
+                <h2>الدروس والملخصات</h2>
+                <p>قريباً... تلخيصات مبسطة حسب المقرر المغربي</p>
+            </div>
+            <span class="coming-soon-tag">قريباً</span>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" class="nav-item active">
+            <span>🏠</span>
+            <span>الرئيسية</span>
+        </a>
+        <a href="#" class="nav-item disabled" onclick="alert('خاصية الدروس ستتوفر قريباً!'); return false;">
+            <span>📚</span>
+            <span>الدروس</span>
+        </a>
+        <a href="#" class="nav-item" onclick="if(confirm('بغيتي تعود تضبط إعدادات الحساب؟')){localStorage.removeItem('onboarding'); window.location.href='index.html';}">
+            <span>⚙️</span>
+            <span>الإعدادات</span>
+        </a>
+    </nav>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
